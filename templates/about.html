@@ -1,6 +1,44 @@
+# templates/contact.html
 {% extends 'base.html' %}
-{% block title %}About Us{% endblock %}
+{% block title %}Contact{% endblock %}
+
 {% block content %}
-<h2>About Us</h2>
-<p>We are committed to delivering best-in-class services...</p>
+<h1 class="mb-4">Contact Us</h1>
+<form method="POST" action="/booking">
+  <div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input type="text" class="form-control" id="name" name="name" required>
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="email" name="email" required>
+  </div>
+  <div class="mb-3">
+    <label for="date" class="form-label">Preferred Date</label>
+    <input type="date" class="form-control" id="date" name="date">
+  </div>
+  <div class="mb-3">
+    <label for="message" class="form-label">Message</label>
+    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Send Message</button>
+</form>
+
+<div class="text-center mt-5">
+  <p>Entertained by</p>
+  <h2 class="fw-bold animated-logo">Mika</h2>
+</div>
+
+<style>
+.animated-logo {
+  animation: pulse 2s infinite;
+  color: #007BFF;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 1; }
+}
+</style>
 {% endblock %}
