@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div id="heroCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{{ url_for('static', filename='images/hero1.jpg') }}" class="d-block w-100" alt="Slide 1">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Welcome to Your Brand</h5>
+        <p>Next-gen network solutions at your fingertips.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{{ url_for('static', filename='images/hero2.jpg') }}" class="d-block w-100" alt="Slide 2">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Secure & Scalable</h5>
+        <p>Enterprise-grade security and scalability.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{{ url_for('static', filename='images/hero3.jpg') }}" class="d-block w-100" alt="Slide 3">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Engineered for Excellence</h5>
+        <p>Solutions tailored to your business goals.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<div class="text-center">
+  <h2>What We Offer</h2>
+  <p class="lead">Consulting, cloud, and network infrastructure that evolve with your business.</p>
+</div>
+{% endblock %}

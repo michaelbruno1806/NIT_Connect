@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Booking{% endblock %}
+{% block content %}
+<h2>Book Your Solution</h2>
+<form method="POST" action="/submit-booking">
+  <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+  <input type="email" name="email" class="form-control" placeholder="Email" required>
+  <input type="date" name="checkin" class="form-control" required>
+  <input type="date" name="checkout" class="form-control" required>
+  <textarea name="message" class="form-control" placeholder="Additional info"></textarea>
+  <button type="submit" class="btn btn-primary mt-3">Submit</button>
+</form>
+{% endblock %}
